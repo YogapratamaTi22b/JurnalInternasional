@@ -1,0 +1,74 @@
+# Main Configuration for Malware Classification Project
+
+# Data Configuration
+data:
+  raw_data_path: "data/raw/"
+  processed_data_path: "data/processed/"
+  external_data_path: "data/external/"
+  
+  # MalwareBazaar API
+  malware_bazaar:
+    base_url: "https://mb-api.abuse.ch/api/v1/"
+    download_limit: 1000
+    api_key: null  # Optional API key for higher limits
+    file_types: ["exe", "dll", "pdf", "doc", "zip"]
+    
+  # Feature extraction settings
+  feature_extraction:
+    max_file_size: 50000000  # 50MB
+    pe_features: true
+    entropy_features: true
+    string_features: true
+    opcodes_features: true
+
+# Model Configuration
+models:
+  test_size: 0.2
+  random_state: 42
+  cross_validation_folds: 5
+  
+  # Random Forest
+  random_forest:
+    n_estimators: 100
+    max_depth: 20
+    min_samples_split: 5
+    min_samples_leaf: 2
+    random_state: 42
+    
+  # Decision Tree  
+  decision_tree:
+    max_depth: 15
+    min_samples_split: 5
+    min_samples_leaf: 2
+    random_state: 42
+    
+  # SVM
+  svm:
+    kernel: "rbf"
+    C: 1.0
+    gamma: "scale"
+    random_state: 42
+
+# Output Configuration
+output:
+  models_path: "models/"
+  results_path: "results/"
+  logs_path: "logs/"
+  
+# Logging Configuration
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  
+# Malware Family Categories
+malware_families:
+  - "Trojan"
+  - "Ransomware" 
+  - "Adware"
+  - "Spyware"
+  - "Backdoor"
+  - "Rootkit"
+  - "Worm"
+  - "Virus"
+  - "Botnet"
+  - "Stealer"

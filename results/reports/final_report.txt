@@ -1,0 +1,93 @@
+MALWARE CLASSIFICATION PROJECT - FINAL REPORT
+============================================================
+
+DATASET SUMMARY:
+--------------------
+Dataset information not available
+
+MODEL PERFORMANCE COMPARISON:
+-----------------------------------
+
+        Model  Test Accuracy  CV Mean   CV Std  Training Time (s)
+          Svm          0.490  0.49250 0.014470           0.146113
+Random Forest          0.485  0.49375 0.011859           0.496700
+     Stacking          0.485  0.00000 0.000000           2.342134
+       Voting          0.475  0.00000 0.000000           0.640517
+Decision Tree          0.460  0.49000 0.012870           0.000000
+
+BEST PERFORMING MODEL:
+-------------------------
+Model: Svm
+Test Accuracy: 0.4900
+Cross-validation Score: 0.4925 ± 0.0145
+Training Time: 0.15 seconds
+
+FAMILY CLASSIFICATION PERFORMANCE (BEST MODEL):
+--------------------------------------------------
+
+Adware:
+  Precision: 1.000
+  Recall: 1.000
+  F1-Score: 1.000
+  Support: 19
+
+Backdoor:
+  Precision: 0.000
+  Recall: 0.000
+  F1-Score: 0.000
+  Support: 19
+
+Botnet:
+  Precision: 0.000
+  Recall: 0.000
+  F1-Score: 0.000
+  Support: 19
+
+Ransomware:
+  Precision: 1.000
+  Recall: 1.000
+  F1-Score: 1.000
+  Support: 18
+
+Rootkit:
+  Precision: 0.198
+  Recall: 1.000
+  F1-Score: 0.331
+  Support: 24
+
+Spyware:
+  Precision: 0.850
+  Recall: 0.895
+  F1-Score: 0.872
+  Support: 19
+
+Stealer:
+  Precision: 0.000
+  Recall: 0.000
+  F1-Score: 0.000
+  Support: 18
+
+Trojan:
+  Precision: 0.909
+  Recall: 0.870
+  F1-Score: 0.889
+  Support: 23
+
+Virus:
+  Precision: 0.000
+  Recall: 0.000
+  F1-Score: 0.000
+  Support: 20
+
+Worm:
+  Precision: 0.000
+  Recall: 0.000
+  F1-Score: 0.000
+  Support: 21
+
+GENERATED FILES:
+---------------
+Models saved in: models/
+Visualizations saved in: results/visualizations/plots/
+Detailed results saved in: results/benchmarks/
+Reports saved in: results/reports/

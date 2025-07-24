@@ -1,0 +1,311 @@
+# requirements/requirements.txt
+# Main dependencies for Malware Classification Pipeline
+
+# Core ML libraries
+scikit-learn>=1.3.0
+numpy>=1.24.0
+pandas>=2.0.0
+scipy>=1.10.0
+
+# Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+plotly>=5.14.0
+
+# Data processing
+PyYAML>=6.0
+joblib>=1.2.0
+
+# Logging and utilities
+tqdm>=4.65.0
+pathlib>=1.0.0
+
+# Optional: For real malware analysis (commented for security)
+# pefile>=2023.2.7
+# python-magic>=0.4.27
+# yara-python>=4.3.1
+
+# requirements/requirements-dev.txt
+# Development dependencies
+
+# Testing
+pytest>=7.3.0
+pytest-cov>=4.1.0
+pytest-mock>=3.10.0
+
+# Code quality
+black>=23.3.0
+flake8>=6.0.0
+isort>=5.12.0
+mypy>=1.3.0
+
+# Documentation
+sphinx>=7.0.0
+sphinx-rtd-theme>=1.2.0
+
+# Jupyter notebooks
+jupyter>=1.0.0
+ipykernel>=6.23.0
+nbconvert>=7.4.0
+
+# requirements/requirements-gpu.txt
+# GPU-specific dependencies (optional)
+
+# For GPU acceleration (if available)
+# scikit-learn-gpu>=1.3.0  # If available
+# cupy-cuda11x>=12.1.0     # For CUDA 11.x
+# cudf>=23.06.0            # GPU dataframes
+
+# .gitignore
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Project specific
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/external/*
+!data/external/.gitkeep
+
+models/*
+!models/.gitkeep
+
+results/*
+!results/.gitkeep
+
+logs/*
+!logs/.gitkeep
+
+# Malware samples (NEVER commit actual malware)
+*.exe
+*.dll
+*.bin
+*.malware
+*.virus
+
+# Large files
+*.pkl
+*.npz
+*.h5
+*.hdf5
+
+# .env.example
+# Example environment variables file
+# Copy this to .env and fill in your values
+
+# API Keys (if using external data sources)
+MALWARE_BAZAAR_API_KEY=your_api_key_here
+VIRUSTOTAL_API_KEY=your_api_key_here
+
+# Data directories
+RAW_DATA_DIR=data/raw/
+PROCESSED_DATA_DIR=data/processed/
+MODELS_DIR=models/
+RESULTS_DIR=results/
+
+# Model parameters
+RANDOM_STATE=42
+TEST_SIZE=0.2
+CV_FOLDS=5
+
+# Computational resources
+N_JOBS=-1
+MEMORY_LIMIT=8GB
+
+# Logging
+LOG_LEVEL=INFO
+LOG_DIR=logs/
+
+# setup.py
+from setuptools import setup, find_packages
+
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
+
+with open("requirements/requirements.txt", "r", encoding="utf-8") as fh:
+    requirements = [line.strip() for line in fh if line.strip() and not line.startswith("#")]
+
+setup(
+    name="malware-classification-pipeline",
+    version="1.0.0",
+    author="Your Name",
+    author_email="your.email@example.com",
+    description="A machine learning pipeline for malware classification",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/yourusername/malware-classification-pipeline",
+    packages=find_packages(where="src"),
+    package_dir={"": "src"},
+    classifiers=[
+        "Development Status :: 4 - Beta",
+        "Intended Audience :: Developers",
+        "Intended Audience :: Science/Research",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Topic :: Scientific/Engineering :: Artificial Intelligence",
+        "Topic :: Security",
+    ],
+    python_requires=">=3.8",
+    install_requires=requirements,
+    extras_require={
+        "dev": [
+            "pytest>=7.3.0",
+            "pytest-cov>=4.1.0",
+            "black>=23.3.0",
+            "flake8>=6.0.0",
+            "isort>=5.12.0",
+        ],
+        "gpu": [
+            "cupy-cuda11x>=12.1.0",
+        ],
+        "docs": [
+            "sphinx>=7.0.0",
+            "sphinx-rtd-theme>=1.2.0",
+        ],
+    },
+    entry_points={
+        "console_scripts": [
+            "malware-classify=scripts.run_full_pipeline:main",
+        ],
+    },
+    include_package_data=True,
+    zip_safe=False,
+)
+
+# Makefile
+# Build automation for the project
+
+.PHONY: help install install-dev test lint format clean docs run
+
+help:
+	@echo "Available commands:"
+	@echo "  install     Install package dependencies"
+	@echo "  install-dev Install development dependencies"
+	@echo "  test        Run tests"
+	@echo "  lint        Run linting"
+	@echo "  format      Format code"
+	@echo "  clean       Clean build artifacts"
+	@echo "  docs        Build documentation"
+	@echo "  run         Run the full pipeline"
+
+install:
+	pip install -r requirements/requirements.txt
+
+install-dev:
+	pip install -r requirements/requirements.txt
+	pip install -r requirements/requirements-dev.txt
+
+test:
+	python -m pytest tests/ -v --cov=src --cov-report=html
+
+lint:
+	flake8 src/ tests/
+	mypy src/
+
+format:
+	black src/ tests/ scripts/
+	isort src/ tests/ scripts/
+
+clean:
+	find . -type f -name "*.pyc" -delete
+	find . -type d -name "__pycache__" -delete
+	rm -rf build/
+	rm -rf dist/
+	rm -rf *.egg-info/
+	rm -rf htmlcov/
+	rm -rf .pytest_cache/
+	rm -rf .mypy_cache/
+
+docs:
+	cd docs && make html
+
+run:
+	python scripts/run_full_pipeline.py
+
+setup-dirs:
+	mkdir -p data/raw data/processed data/external
+	mkdir -p models/random_forest models/decision_tree models/svm models/ensemble
+	mkdir -p results/benchmarks results/reports results/visualizations/plots results/predictions
+	mkdir -p logs
+	touch data/raw/.gitkeep data/processed/.gitkeep data/external/.gitkeep
+	touch models/.gitkeep results/.gitkeep logs/.gitkeep
