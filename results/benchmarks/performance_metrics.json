@@ -1,0 +1,1002 @@
+{
+  "random_forest": {
+    "accuracy": 0.485,
+    "classification_report": {
+      "Adware": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 19.0
+      },
+      "Backdoor": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 19.0
+      },
+      "Botnet": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 19.0
+      },
+      "Ransomware": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 18.0
+      },
+      "Rootkit": {
+        "precision": 0.19834710743801653,
+        "recall": 1.0,
+        "f1-score": 0.3310344827586207,
+        "support": 24.0
+      },
+      "Spyware": {
+        "precision": 0.8823529411764706,
+        "recall": 0.7894736842105263,
+        "f1-score": 0.8333333333333333,
+        "support": 19.0
+      },
+      "Stealer": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 18.0
+      },
+      "Trojan": {
+        "precision": 0.84,
+        "recall": 0.9130434782608695,
+        "f1-score": 0.8749999999999999,
+        "support": 23.0
+      },
+      "Virus": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 20.0
+      },
+      "Worm": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 21.0
+      },
+      "accuracy": 0.485,
+      "macro avg": {
+        "precision": 0.3920700048614487,
+        "recall": 0.4702517162471396,
+        "f1-score": 0.40393678160919533,
+        "support": 200.0
+      },
+      "weighted avg": {
+        "precision": 0.38922518230432673,
+        "recall": 0.485,
+        "f1-score": 0.40451580459770115,
+        "support": 200.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        19,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        19,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        19,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        18,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        24,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        0,
+        4,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        18,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        21,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        20,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        21,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "decision_tree": {
+    "accuracy": 0.46,
+    "classification_report": {
+      "Adware": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 19.0
+      },
+      "Backdoor": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 19.0
+      },
+      "Botnet": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 19.0
+      },
+      "Ransomware": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 18.0
+      },
+      "Rootkit": {
+        "precision": 0.19834710743801653,
+        "recall": 1.0,
+        "f1-score": 0.3310344827586207,
+        "support": 24.0
+      },
+      "Spyware": {
+        "precision": 0.6538461538461539,
+        "recall": 0.8947368421052632,
+        "f1-score": 0.7555555555555555,
+        "support": 19.0
+      },
+      "Stealer": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 18.0
+      },
+      "Trojan": {
+        "precision": 0.875,
+        "recall": 0.6086956521739131,
+        "f1-score": 0.717948717948718,
+        "support": 23.0
+      },
+      "Virus": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 20.0
+      },
+      "Worm": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 21.0
+      },
+      "accuracy": 0.46,
+      "macro avg": {
+        "precision": 0.37271932612841707,
+        "recall": 0.4503432494279176,
+        "f1-score": 0.3804538756262894,
+        "support": 200.0
+      },
+      "weighted avg": {
+        "precision": 0.3715420375079466,
+        "recall": 0.46,
+        "f1-score": 0.3790660182729148,
+        "support": 200.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        19,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        19,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        19,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        18,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        24,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        17,
+        0,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        18,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        9,
+        0,
+        14,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        20,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        21,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "svm": {
+    "accuracy": 0.49,
+    "classification_report": {
+      "Adware": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 19.0
+      },
+      "Backdoor": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 19.0
+      },
+      "Botnet": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 19.0
+      },
+      "Ransomware": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 18.0
+      },
+      "Rootkit": {
+        "precision": 0.19834710743801653,
+        "recall": 1.0,
+        "f1-score": 0.3310344827586207,
+        "support": 24.0
+      },
+      "Spyware": {
+        "precision": 0.85,
+        "recall": 0.8947368421052632,
+        "f1-score": 0.8717948717948718,
+        "support": 19.0
+      },
+      "Stealer": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 18.0
+      },
+      "Trojan": {
+        "precision": 0.9090909090909091,
+        "recall": 0.8695652173913043,
+        "f1-score": 0.888888888888889,
+        "support": 23.0
+      },
+      "Virus": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 20.0
+      },
+      "Worm": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 21.0
+      },
+      "accuracy": 0.49,
+      "macro avg": {
+        "precision": 0.3957438016528926,
+        "recall": 0.47643020594965674,
+        "f1-score": 0.4091718243442381,
+        "support": 200.0
+      },
+      "weighted avg": {
+        "precision": 0.3940971074380165,
+        "recall": 0.49,
+        "f1-score": 0.40976687297376957,
+        "support": 200.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        19,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        19,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        19,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        18,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        24,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        17,
+        0,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        18,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        20,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        20,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        21,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "voting": {
+    "accuracy": 0.475,
+    "classification_report": {
+      "Adware": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 19.0
+      },
+      "Backdoor": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 19.0
+      },
+      "Botnet": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 19.0
+      },
+      "Ransomware": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 18.0
+      },
+      "Rootkit": {
+        "precision": 0.19834710743801653,
+        "recall": 1.0,
+        "f1-score": 0.3310344827586207,
+        "support": 24.0
+      },
+      "Spyware": {
+        "precision": 0.7391304347826086,
+        "recall": 0.8947368421052632,
+        "f1-score": 0.8095238095238095,
+        "support": 19.0
+      },
+      "Stealer": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 18.0
+      },
+      "Trojan": {
+        "precision": 0.8947368421052632,
+        "recall": 0.7391304347826086,
+        "f1-score": 0.8095238095238095,
+        "support": 23.0
+      },
+      "Virus": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 20.0
+      },
+      "Worm": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 21.0
+      },
+      "accuracy": 0.475,
+      "macro avg": {
+        "precision": 0.3832214384325888,
+        "recall": 0.4633867276887872,
+        "f1-score": 0.395008210180624,
+        "support": 200.0
+      },
+      "weighted avg": {
+        "precision": 0.3819137810390151,
+        "recall": 0.475,
+        "f1-score": 0.3947241379310345,
+        "support": 200.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        19,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        19,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        19,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        18,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        24,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        17,
+        0,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        18,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        6,
+        0,
+        17,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        20,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        21,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "stacking": {
+    "accuracy": 0.485,
+    "classification_report": {
+      "Adware": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 19.0
+      },
+      "Backdoor": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 19.0
+      },
+      "Botnet": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 19.0
+      },
+      "Ransomware": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 18.0
+      },
+      "Rootkit": {
+        "precision": 0.19834710743801653,
+        "recall": 1.0,
+        "f1-score": 0.3310344827586207,
+        "support": 24.0
+      },
+      "Spyware": {
+        "precision": 0.782608695652174,
+        "recall": 0.9473684210526315,
+        "f1-score": 0.8571428571428571,
+        "support": 19.0
+      },
+      "Stealer": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 18.0
+      },
+      "Trojan": {
+        "precision": 0.9473684210526315,
+        "recall": 0.782608695652174,
+        "f1-score": 0.8571428571428571,
+        "support": 23.0
+      },
+      "Virus": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 20.0
+      },
+      "Worm": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 21.0
+      },
+      "accuracy": 0.485,
+      "macro avg": {
+        "precision": 0.3928324224142822,
+        "recall": 0.47299771167048055,
+        "f1-score": 0.4045320197044335,
+        "support": 200.0
+      },
+      "weighted avg": {
+        "precision": 0.39209684740057116,
+        "recall": 0.485,
+        "f1-score": 0.4047241379310345,
+        "support": 200.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        19,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        19,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        19,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        18,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        24,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        18,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        18,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        5,
+        0,
+        18,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        20,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        21,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  }
+}
